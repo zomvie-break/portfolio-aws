@@ -11,7 +11,6 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { ReactNode } from "react";
 import logo from "../images/v-logo.png";
 
 const SocialButton = ({ children, label, href }) => {

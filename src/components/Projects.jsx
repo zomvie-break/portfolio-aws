@@ -6,14 +6,11 @@ import {
   Divider,
   CardFooter,
   Button,
-  ButtonGroup,
   Text,
   Heading,
   HStack,
   VStack,
-  Link,
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import bingo from "../images/projects/bingo.png";
 import wordsearch from "../images/projects/wordsearch.png";
 import { FaGithub } from "react-icons/fa";

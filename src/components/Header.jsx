@@ -1,14 +1,6 @@
 import roque from "../images/roque.png";
 import cv from "../media/cv.pdf";
-import {
-  Box,
-  Container,
-  Image,
-  Heading,
-  HStack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Image, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaRegFileAlt } from "react-icons/fa";
 
 export default function Header() {
