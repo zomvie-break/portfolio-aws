@@ -1,5 +1,27 @@
-.App {
-  text-align: center;
+.outermost-container {
+  background-color: #eceff4;
+}
+
+.header-social-logo {
+  background-color: #d8dee9;
+  padding: 1em;
+  border-radius: 20px;
+  color: #2e3440;
+}
+
+.header-social-logo:hover {
+  background-color: #2e3440;
+  color: #d8dee9;
+}
+
+.section-info {
+  color: #4c566a;
+  margin-bottom: 1em;
+}
+
+.section-info-text {
+  color: #4c566a;
+  background-color: #d8dee9;
 }
 
 .App-logo {

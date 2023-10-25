@@ -21,11 +21,21 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
-const Links = ["Dashboard", "Projects", "Team"];
-
+const linksInNav = {
+  aboutme: {
+    name: "AboutMe",
+    href: "/about-me",
+  },
+  projects: {
+    name: "Projects",
+    href: "/projects",
+  },
+};
 const NavLink = (props) => {
   const { children } = props;
-
+  const href = props.href;
+  const key = props.name;
+  // const href = props.href;
   return (
     <Box
       as="a"
@@ -36,7 +46,8 @@ const NavLink = (props) => {
         textDecoration: "none",
         bg: useColorModeValue("gray.200", "gray.700"),
       }}
-      href={"#"}
+      href={href}
+      key={key}
     >
       {children}
     </Box>
@@ -64,38 +75,25 @@ export default function Navbar() {
               spacing={4}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <NavLink key={"aboutme"} href={"#aboutme"}>
+                About me
+              </NavLink>{" "}
+              <NavLink key={"projects"} href={"#projects"}>
+                Projects
+              </NavLink>{" "}
             </HStack>
           </HStack>
-          <Flex alignItems={"center"}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={"full"}
-                variant={"link"}
-                cursor={"pointer"}
-                minW={0}
-              >
-                <Avatar size={"sm"} src={roque} />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
-          </Flex>
         </Flex>
 
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <NavLink key={"aboutme"} href={"#aboutme"}>
+                About me
+              </NavLink>{" "}
+              <NavLink key={"projects"} href={"#projects"}>
+                Projects
+              </NavLink>{" "}
             </Stack>
           </Box>
         ) : null}
